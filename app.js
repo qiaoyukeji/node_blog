@@ -4,12 +4,14 @@
  * @Author: qiaoyurensheng@163.com
  * @Date: 2020-06-13 15:44:42
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2020-06-14 14:45:51
+ * @LastEditTime: 2020-06-14 20:14:37
  */
 // 引入express框架
 const express = require('express')
 // 处理路径
 const path = require('path')
+// 引入数据库连接
+require('./model/connect')
 // 创建网站服务器
 const app = express();
 
