@@ -1,0 +1,22 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: qiaoyurensheng@163.com
+ * @Date: 2020-06-14 22:49:24
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2020-06-14 22:56:26
+-->
+{{extend './common/layout.art'}}
+
+
+{{block 'main'}}
+<h2 class="bg-danger error">{{msg}}</h2>
+{{/block}}
+
+{{block 'script'}}
+<script src="">
+    setTimeout(() => {
+        location.href = '/admin/login'
+    }, 3000)
+</script>
+{{/block}}

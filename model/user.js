@@ -4,7 +4,7 @@
  * @Author: qiaoyurensheng@163.com
  * @Date: 2020-06-14 20:07:59
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2020-06-14 20:08:00
+ * @LastEditTime: 2020-06-14 21:04:17
  */
 const mongoose = require('mongoose')
 
@@ -25,6 +25,8 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
+    // admin 超级管理员
+    // normal 普通用户
     role: {
         type: String,
         required: true
@@ -36,6 +38,19 @@ const userSchema = new mongoose.Schema({
 })
 // 创建集合
 const User = mongoose.model("User", userSchema)
+
+// // 创建一个测试用户
+// User.create({
+//     username: 'qiaoyu',
+//     email: 'qiaoyu@qiaoyu.cn',
+//     password: '123456',
+//     role: 'admin',
+//     state: '0'
+// }).then(() => {
+//     console.log("用户创建成功");
+// }).catch(() => {
+//     console.log('用户创建失败');
+// })
 
 // 将用户集合导出
 module.exports = {

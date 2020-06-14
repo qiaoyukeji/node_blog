@@ -4,16 +4,25 @@
  * @Author: qiaoyurensheng@163.com
  * @Date: 2020-06-13 15:44:42
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2020-06-14 20:14:37
+ * @LastEditTime: 2020-06-14 22:22:36
  */
 // 引入express框架
 const express = require('express')
 // 处理路径
 const path = require('path')
-// 引入数据库连接
-require('./model/connect')
 // 创建网站服务器
 const app = express();
+
+// 引入bodyparser第三方库
+const bodyParser = require('body-parser')
+
+app.use(bodyParser.urlencoded({ extended: false }))
+
+// 引入数据库连接
+require('./model/connect')
+
+// require('./model/user')
+
 
 // 告诉express模板所在的位置
 app.set('views', path.join(__dirname, 'views'))

@@ -4,7 +4,7 @@
  * @Author: qiaoyurensheng@163.com
  * @Date: 2020-06-13 15:51:26
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2020-06-14 18:07:15
+ * @LastEditTime: 2020-06-14 22:52:03
  */
 // 引入express框架
 const express = require('express')
@@ -15,6 +15,17 @@ admin.get('/login', (req, res) => {
     res.render('admin/login')
 })
 
+// 实现登陆功能
+admin.post('/login', (req, res) => {
+    // 接收请求参数
+    const { email, password } = req.body;
+    if (email.trim().length == 0 || password.trim().length == 0) {
+        res.status(400).render('admin/error', { msg: '邮件地址或密码错误' });
+        return;
+    }
+    res.send(req.body)
+
+})
 // 创建用户列表路由
 admin.get("/user", (req, res) => {
     res.render("admin/user")

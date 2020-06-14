@@ -4,7 +4,7 @@
  * @Author: qiaoyurensheng@163.com
  * @Date: 2020-06-14 18:11:17
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2020-06-14 18:14:34
+ * @LastEditTime: 2020-06-14 21:31:07
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -25,6 +25,7 @@
 
     <script src="/admin/lib/jquery/dist/jquery.min.js"></script>
     <script src="/admin/lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/admin/js/common.js"></script>
     {{block 'script'}}{{/block}}
 
 </body>
