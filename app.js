@@ -8,6 +8,11 @@
  */
 // 引入express框架
 const express = require('express')
+
+//导入express-session
+const session = require('express-session')
+
+
 // 处理路径
 const path = require('path')
 // 创建网站服务器
@@ -17,6 +22,8 @@ const app = express();
 const bodyParser = require('body-parser')
 
 app.use(bodyParser.urlencoded({ extended: false }))
+// 配置session secret项可自定义，用以加密
+app.use(session({ secret: "secret key" }))
 
 // 引入数据库连接
 require('./model/connect')
