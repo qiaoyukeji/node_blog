@@ -4,7 +4,7 @@
  * @Author: qiaoyurensheng@163.com
  * @Date: 2020-06-13 15:44:42
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2020-06-14 22:22:36
+ * @LastEditTime: 2020-06-18 01:45:31
  */
 // 引入express框架
 const express = require('express')
@@ -47,6 +47,10 @@ app.use(express.static(path.join(__dirname, "public")))
 const home = require('./route/home')
 const admin = require('./route/admin');
 const artTemplate = require('art-template');
+
+// 拦截 /admin 开头请求
+app.use('/admin', require('./middleware/loginGuard'))
+
 
 // 为路由匹配请求路径
 app.use('/home', home);

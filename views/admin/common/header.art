@@ -4,7 +4,7 @@
  * @Author: qiaoyurensheng@163.com
  * @Date: 2020-06-14 18:01:16
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2020-06-18 01:30:59
+ * @LastEditTime: 2020-06-18 13:18:10
 -->
 <!-- 头部 -->
 <div class="header">
@@ -17,12 +17,12 @@
     <div class="info">
         <div class="profile dropdown fr">
             <span class="btn dropdown-toggle" data-toggle="dropdown">
-                {{userInfo.username}}
+                {{userInfo.username?userInfo.username:''}}
                 <span class="caret"></span>
             </span>
             <ul class="dropdown-menu">
                 <li><a href="user-edit.html">个人资料</a></li>
-                <li><a href="#">退出登录</a></li>
+                <li><a href="/admin/logout">退出登录</a></li>
             </ul>
         </div>
     </div>
