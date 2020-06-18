@@ -4,7 +4,7 @@
  * @Author: qiaoyurensheng@163.com
  * @Date: 2020-06-13 15:51:26
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2020-06-18 13:16:55
+ * @LastEditTime: 2020-06-18 13:37:08
  */
 // 引入express框架
 const express = require('express')
@@ -22,7 +22,11 @@ admin.post('/login', require('./admin/login'))
 // 创建用户列表路由
 admin.get("/user", require('./admin/userPage'))
 
+// 创建用户编辑页面路由
+admin.get('/user-edit', require('./admin/user-edit'))
 
+// 创建添加用户的路由
+admin.post('/user-edit', require('./admin/user-edit-fn'))
 
 
 // 实现退出功能
